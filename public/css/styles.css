@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+  font-family: "Roboto";
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  min-width: 48px;
+  min-height: 38px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  background-color: rgb(25, 118, 210);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, 
+    rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, 
+    rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+}
+
+.button i {
+  font-size: 16px;
+}
+
+.card {
+  border-radius: 4px;
+  border: 1px solid rgb(224, 224, 224);
+  padding: 20px;
+}
+
+.bg-secondary {
+  background-color: rgb(156, 39, 176);
+}
+
+.bg-danger {
+  background-color: rgb(211, 47, 47);
+}
+
+.bg-success {
+  background-color: rgb(46, 125, 50);
+}
+
+.label {
+  color: rgb(80, 80, 80);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.go-back {
+  color: rgb(25, 118, 210);
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 64px;
+}
+
+input[type=text] {
+  padding: 22px 14px;
+  height: 1.4375em;
+  font-size: 18px;
+  line-height: 1.4375em;
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 4px;
+}
+
+input[type=file] {
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 4px;
+}
+
+justify-center {
+  justify-content: center;
+}
+
+align-center {
+  align-items: center;
+}
+
+form {
+  margin: 0;
+}
+
+.avatar {
+  object-fit:cover;
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 50%; 
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.fixed-button {
+  position: fixed;
+  min-width: 58px;
+  min-height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, 
+    rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, 
+    rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+  bottom: 16;
+  right: 16;
+}

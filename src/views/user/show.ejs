@@ -1,0 +1,31 @@
+<html>
+  <!-- <head> -->
+    <%- include('../partials/head') %>
+  <!-- </head> -->
+  <body>
+    <div class="column">
+      <a class="go-back" href="/users/"><i class="fas fa-chevron-left"></i> Voltar</a>
+      <div class="row justify-center">
+        <img class="avatar" width="180px" height="180px" src="/uploads/<%= user.avatar %>" />
+      </div>
+      <div style="height: 18px"></div>
+      <div class="label">Nome</div>
+      <input type="text" readonly value="<%= user.name %>">
+      <div style="height: 18px"></div>
+      <div class="label">Email</div>
+      <input type="text" readonly value="<%= user.email %>">
+      <div style="height: 24px"></div>
+      <div class="row">
+        <a class="button bg-secondary" href="/users/edit/<%=user.id%>">
+          <i class="fas fa-pen"></i>
+        </a>
+        <div style="width: 8px"></div>
+        <form method="POST" action="/users/<%=user.id%>?_method=DELETE">
+          <button class="button bg-danger">
+            <i class="fas fa-trash"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

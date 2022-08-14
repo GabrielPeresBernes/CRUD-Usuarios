@@ -1,0 +1,39 @@
+<html>
+  <!-- <head> -->
+    <%- include('../partials/head') %>
+  <!-- </head> -->
+  <body>
+    <form
+      method="POST"
+      action="<%= user ? `/users/${user.id}?_method=PUT` : '/users/' %>"
+      enctype="multipart/form-data"
+    >
+      <div class="column">
+        <a class="go-back" href="/users/"><i class="fas fa-chevron-left"></i> Voltar</a>
+        <% if(user) { %>
+          <div class="row">
+            <img class="avatar" width="49px" height="49px" src="/uploads/<%= user.avatar %>"/>
+            <div style="width: 16px"></div>
+            <div class="column">
+              <div class="label">Avatar</div>
+              <input type="file" name="avatar" required>
+            </div>
+          </div>
+        <% } else { %>
+          <div class="label">Avatar</div>
+          <input type="file" name="avatar" required>
+        <% } %>
+        <div style="height: 18px"></div>
+        <div class="label">Nome</div>
+        <input type="text" name="name" required value="<%= user ? user.name : '' %>">
+        <div style="height: 18px"></div>
+        <div class="label">Email</div>
+        <input type="text" name="email" required value="<%= user ? user.email : '' %>">
+        <div style="height: 24px"></div>
+        <button class="button bg-success">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+    </form>
+  </body>
+</html>
