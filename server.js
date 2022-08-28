@@ -19,7 +19,7 @@ server.use(express.static(__dirname + '/public'));
 // permitir que o servidor use o método PUT e DELETE
 server.use(methodOverride('_method'));
 
-// permitir o uso do formulário multipart/form-data
+// permitir o uso de req.body
 server.use(express.urlencoded({extended: false}));
 
 // rotas
